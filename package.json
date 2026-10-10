@@ -1,0 +1,38 @@
+{
+  "name": "dsh-obsidian-memory",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "DeepSeek Harness plugin for durable Obsidian memory: classified Markdown notes, on-demand search, full reads and bounded prompt injection.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jianyank/obsidian-dsh.git"
+  },
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "test:unit": "node --test tests/card.test.mjs tests/store.test.mjs",
+    "test:tools": "node --test tests/tools.test.mjs"
+  },
+  "icon": "./icon.svg",
+  "meta": {
+    "title": "Obsidian DSH 记忆体",
+    "description": "DeepSeek Harness 原生 Obsidian 记忆插件：分类写入 Markdown，按需检索、完整读取与有界提示词注入。"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json"
+  },
+  "files": [
+    "index.js",
+    "lib",
+    "locale",
+    "icon.svg",
+    "cordis.patch.yml"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

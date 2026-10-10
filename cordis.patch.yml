@@ -1,0 +1,22 @@
+# dsh-obsidian-memory bundle patch.
+#
+# This file is the `dsh.bundle.patch` layer of the package: installing the
+# bundle appends `dsh-obsidian-memory` to `dsh.profile.bundles`, and the profile
+# boot merges THIS patch — a single `insert` of the plugin row.
+#
+# The `config` below is only the install-time default. Override it by entry id
+# from your own profile `cordis.patch.yml` (a matching override replaces the
+# complete `config`, so restate every key you still want):
+#
+#   - id: obsidian-memory
+#     name: 'dsh-obsidian-memory'
+#     config:
+#       vaultPath: 'D:/AI/Obsidian/Deepseek Harness'
+#       memoryRoot: 'Memory'
+#       injectBudgetChars: 2400
+- insert:
+    - id: obsidian-memory
+      name: 'dsh-obsidian-memory'
+      config:
+        vaultPath: 'D:/AI/Obsidian/Deepseek Harness'
+        memoryRoot: 'Memory'
